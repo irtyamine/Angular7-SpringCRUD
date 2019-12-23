@@ -34,16 +34,43 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
 <!-- 		<dependency> -->
 <!-- 			<groupId>mysql</groupId> -->
 <!-- 			<artifactId>mysql-connector-java</artifactId> -->
 <!-- 			<scope>runtime</scope> -->
 <!-- 		</dependency> --> 
+
+
+<!--        URl: https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/
+			1. Create lib folder inside project.
+			2. Add ojdbc8.jar file into it.
+ -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+		    <groupId>com.oracle</groupId> 
+			<artifactId>ojdbc</artifactId>
+			<version>8</version>
+			<scope>system</scope> 
+			<systemPath>${project.basedir}/lib/ojdbc8.jar</systemPath>
+	    </dependency>
+		
+		<!-- lombok setup in STS
+			1. Go to C:\Users\YourPCUserName\.m2\repository\org\projectlombok\lombok\1.18.10\
+			2. Open CMD and run the jar file using java -jar lombok-1.18.10.jar //this is can be any Version
+			3. Specify the location on your own i.e E:\software\Spring Tool Suite-STS\sts-4.4.2.RELEASE\
+			4. Restart STS
+		-->
+		<dependency>
+			<groupId>org.projectlombok</groupId> 
+			<artifactId>lombok</artifactId>
 		</dependency>
+		
 	</dependencies>
 
 	<build>
