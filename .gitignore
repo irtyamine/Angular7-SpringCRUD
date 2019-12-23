@@ -1,4 +1,5 @@
 HELP.md
+/lib/
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 /employee-crud-client/node_modules
