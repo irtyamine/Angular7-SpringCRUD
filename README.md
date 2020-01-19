@@ -1,4 +1,3 @@
-gaurav
 Angular Guide for begineer
 
 
@@ -12,7 +11,7 @@ E:\00_AngularCliProject\myProjectAngular\ npm install -g @angular/cli@7.3.9
 6.move to ypur project> cd project-name
 7.Start or run your project now> ng serve
 8.create service add this line there
- 
+
 constructor(private http:HttpClient) { }
 
   post(url:string, data:any): Observable<any> 
