@@ -1,16 +1,13 @@
 pipeline {
     agent any
-
     stages {
         stage ('Compile Stage') {
 
             steps {
                      sh 'mvn clean compile'
                 }
-
-        }
-
-        stage ('Testing Stage') {
+      }
+       stage ('Testing Stage') {
 
             steps {
 
@@ -18,13 +15,9 @@ pipeline {
 
             }
         }
-
-
-        stage ('Deployment Stage') {
+       stage ('Deployment Stage') {
             steps {
-
                     sh 'mvn deploy'
-
             }
         }
     }
