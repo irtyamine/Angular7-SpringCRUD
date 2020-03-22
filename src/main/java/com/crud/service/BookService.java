@@ -3,6 +3,7 @@ package com.crud.service;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.crud.model.BookModel;
 
@@ -40,6 +41,11 @@ public class BookService {
 			
 		}
 		return actualList;
+	}
+	
+	public List<BookModel> getBookByTitle(String title) {
+		
+		return listOfBook.stream().filter(bookObject -> bookObject.getTitle().equalsIgnoreCase(title)).collect(Collectors.toList());
 	}
 	
 
