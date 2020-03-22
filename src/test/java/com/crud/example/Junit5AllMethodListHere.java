@@ -28,7 +28,7 @@ public class Junit5AllMethodListHere {
 	@Test
 	public void assert_True_Method_overloading() {
 		String password="Asdf1234";
-		assertTrue(password.equalsIgnoreCase("Asdf1235"), "Password is incorrect");
+		assertTrue(password.equalsIgnoreCase("Asdf1234"), "Password is correct");
 	}
 	
 
