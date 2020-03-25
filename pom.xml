@@ -23,7 +23,7 @@
 		<junit.platform.version>1.5.2</junit.platform.version>
 	</properties>
 
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<dependencies>
 			<dependency>
