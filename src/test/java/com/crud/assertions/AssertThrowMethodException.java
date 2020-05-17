@@ -1,4 +1,4 @@
-package com.crud.example;
+package com.crud.assertions;
 
 import com.crud.exception.BookNotFoundException;
 import com.crud.model.BookModel;

@@ -1,4 +1,4 @@
-package com.crud.example;
+package com.crud.assertions;
 
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;

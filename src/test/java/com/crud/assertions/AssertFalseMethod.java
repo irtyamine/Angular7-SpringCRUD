@@ -1,4 +1,4 @@
-package com.crud.example;
+package com.crud.assertions;
 
 import com.crud.model.BookModel;
 import com.crud.service.BookService;
