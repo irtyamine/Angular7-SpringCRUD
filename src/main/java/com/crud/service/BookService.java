@@ -9,36 +9,32 @@ import com.crud.model.BookModel;
 
 public class BookService {
 	
-	List<BookModel> listOfBook = new ArrayList<>();
+	private List<BookModel> listOfBook;
 	
 	public List<BookModel> getListOfBook() {
 		return listOfBook;
 	}
 
-
 	public void addBookInList(BookModel model) {
+		if(listOfBook == null)
+			this.listOfBook = new ArrayList<>();
 		listOfBook.add(model);
 	}
-	
 
 	public List<BookModel> Book() {
 		return Collections.unmodifiableList(listOfBook);
 	}
-	
-	
+
 	public BookModel getBookModel() {
 		return new BookModel();
 	}
-	
-	
+
 	public List<String> getBookTitlesByPublisher(String publisher){
 		List<String> actualList = new ArrayList<>();
-		
 		for(BookModel book:listOfBook) {
 			if(publisher.equalsIgnoreCase(book.getPublisher())){
 				actualList.add(book.getTitle());
 			}
-			
 		}
 		return actualList;
 	}
@@ -47,6 +43,13 @@ public class BookService {
 		
 		return listOfBook.stream().filter(bookObject -> bookObject.getTitle().equalsIgnoreCase(title)).collect(Collectors.toList());
 	}
-	
 
+	public BookService(){
+		super();
+	}
+	public BookService(List<BookModel> listOfBook) {
+		this.listOfBook = listOfBook;
+	}
 }
+
+
