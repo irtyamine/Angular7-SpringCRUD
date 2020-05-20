@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assumptions.assumeFalse;
 
-public class AssumeFalseMethod {
+public class AssumeFalseMethodTest {
 
     @Test
     public void assumeFalseWithNoMessage() {

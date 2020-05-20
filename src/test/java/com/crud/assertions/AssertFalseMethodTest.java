@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class AssertFalseMethod {
+class AssertFalseMethodTest {
 
     /* Actual Value= False , Test Case will Pass
      * Actual Value= True , Test Case will Fail

@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 
-class AssertTimeOutMethod {
+class AssertTimeOutMethodTest {
 
 	@Test
 	void assert_timeout_without_messages() {
@@ -46,7 +46,7 @@ class AssertTimeOutMethod {
 			service.addBookInList(new BookModel(String.valueOf(i), "Core Java", "TechMax"));
 		}
 		List<String> actualTitles = new ArrayList<>();
-		assertTimeout(Duration.ofMillis(3), () -> {
+		assertTimeout(Duration.ofMillis(5), () -> {
 			actualTitles.addAll(service.getBookTitlesByPublisher("TechMax"));
 		}, () -> "Performance issues with getBookTitlesByPublisher() method !");
 		assertEquals(10000, actualTitles.size());

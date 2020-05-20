@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-class AssertNullMethod {
+class AssertNullMethodTest {
 
     /* Actual Value= NULL , Test Case will Pass
      * Actual Value= NOT NULL , Test Case will Fail
