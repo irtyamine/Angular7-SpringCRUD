@@ -11,7 +11,7 @@ public class LifeCycleHooksPerMethod {
     }
 
     public LifeCycleHooksPerMethod() {
-        System.out.println("Constructor got executed !!!");
+        System.out.println("Constructor got executed !!! ====> It will create Test class instance for every test method");
     }
 
     @BeforeEach
