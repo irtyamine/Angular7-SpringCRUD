@@ -46,7 +46,7 @@ class AssertTimeOutMethodTest {
 			service.addBookInList(new BookModel(String.valueOf(i), "Core Java", "TechMax"));
 		}
 		List<String> actualTitles = new ArrayList<>();
-		assertTimeout(Duration.ofMillis(3), () -> {
+		assertTimeout(Duration.ofMillis(5), () -> {
 			actualTitles.addAll(service.getBookTitlesByPublisher("TechMax"));
 		}, () -> "Performance issues with getBookTitlesByPublisher() method !");
 		assertEquals(10000, actualTitles.size());

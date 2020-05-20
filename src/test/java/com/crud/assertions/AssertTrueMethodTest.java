@@ -2,6 +2,7 @@ package com.crud.assertions;
 
 import com.crud.model.BookModel;
 import com.crud.service.BookService;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -10,6 +11,7 @@ public class AssertTrueMethodTest {
 
 
     @Test
+    @Disabled("skipped until #95 issue has been fixed")
     public void assert_True_Method_overloading_without_message() {
 
         BookModel model = new BookModel("101", "Core Java", "Tata McGrawHill");
@@ -19,6 +21,7 @@ public class AssertTrueMethodTest {
     }
 
     @Test
+    @Disabled("skipped until #95 issue has been fixed")
     public void assert_True_Method_overloading_with_Message() {
 
         BookModel model = new BookModel("101", "Core Java", "Tata McGrawHill");
@@ -28,6 +31,7 @@ public class AssertTrueMethodTest {
     }
 
     @Test
+    @Disabled("skipped until #95 issue has been fixed")
     public void assert_True_Method_overloading_with_boolean_supplier() {
 
         BookModel model = new BookModel("101", "Core Java", "Tata McGrawHill");
@@ -37,6 +41,7 @@ public class AssertTrueMethodTest {
     }
 
     @Test
+    @Disabled("skipped until #95 issue has been fixed")
     public void assert_True_Method_overloading_with_boolean_supplier_messgae_supplier() {
 
         BookModel model = new BookModel("101", "Core Java", "Tata McGrawHill");
