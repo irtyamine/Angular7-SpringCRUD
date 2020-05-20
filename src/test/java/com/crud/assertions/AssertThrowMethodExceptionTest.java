@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class AssertThrowMethodException {
+public class AssertThrowMethodExceptionTest {
 
     @Test
     public void assert_Throw_Method_Without_Message() {

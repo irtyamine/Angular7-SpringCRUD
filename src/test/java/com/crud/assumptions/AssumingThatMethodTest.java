@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
 
-public class AssumingThatMethod {
+public class AssumingThatMethodTest {
 
     @Test
     public void assumingThatWithBooleanCondition() {

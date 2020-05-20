@@ -3,14 +3,14 @@ package com.crud.lifecycle;
 import org.junit.jupiter.api.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
-public class LifeCycleHooksPerMethod {
+public class LifeCycleHooksPerMethodTest {
 
     @BeforeAll // Note: static keyword is used here
     public static void beforeAll() {
         System.out.println("@BeforeAll got executed !!!");
     }
 
-    public LifeCycleHooksPerMethod() {
+    public LifeCycleHooksPerMethodTest() {
         System.out.println("Constructor got executed !!! ====> It will create Test class instance for every test method");
     }
 

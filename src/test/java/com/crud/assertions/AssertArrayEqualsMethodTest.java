@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class AssertArrayEqualsMethod {
+public class AssertArrayEqualsMethodTest {
 
 	/* Array Equality means:--
 	 *  1. Elements of array are equal

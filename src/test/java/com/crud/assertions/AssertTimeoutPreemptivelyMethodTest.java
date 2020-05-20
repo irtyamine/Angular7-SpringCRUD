@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 
-public class AssertTimeoutPreemptivelyMethod {
+public class AssertTimeoutPreemptivelyMethodTest {
 
     @Test
     void assert_timeout_preemptively_without_messages() {

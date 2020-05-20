@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
-class AssertIterableEqualsMethod {
+class AssertIterableEqualsMethodTest {
 
     /* Iterable Equality means:--
      *  1. Elements of Iterable are equal

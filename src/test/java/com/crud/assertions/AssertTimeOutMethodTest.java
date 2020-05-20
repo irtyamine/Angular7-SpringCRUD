@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 
-class AssertTimeOutMethod {
+class AssertTimeOutMethodTest {
 
 	@Test
 	void assert_timeout_without_messages() {
