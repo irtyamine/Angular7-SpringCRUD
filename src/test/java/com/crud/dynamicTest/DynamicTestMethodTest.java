@@ -5,10 +5,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
@@ -58,6 +55,23 @@ public class DynamicTestMethodTest {
         }
 
         return dynamicTests;
+    }
+
+    @TestFactory
+    public Iterator<DynamicTest> dynamicTestFromIterator() {
+        List<String> inputList = createInputList();
+        List<String> outputList = createOutputList();
+
+        Collection<DynamicTest> dynamicTests = new ArrayList<>();
+        for (int i = 0; i < inputList.size(); i++) {
+            String input = inputList.get(i);
+            String output = outputList.get(i);
+
+            DynamicTest dynamicTest = dynamicTest("Dynamic Test for reverse() : input -" + input, () -> assertEquals("god", stringHelper.reverse("dog")));
+            dynamicTests.add(dynamicTest);
+        }
+
+        return dynamicTests.iterator();
     }
 
     private List<String> createOutputList() {
