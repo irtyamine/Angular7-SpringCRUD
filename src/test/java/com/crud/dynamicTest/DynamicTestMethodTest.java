@@ -2,13 +2,15 @@ package com.crud.dynamicTest;
 
 import com.crud.common.StringHelper;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DynamicNode;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 
 import java.util.*;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
 
@@ -109,6 +111,19 @@ public class DynamicTestMethodTest {
         return dynamicTests.toArray(new DynamicTest[dynamicTests.size()]);
     }
 
+    @TestFactory
+    public Stream<DynamicNode> dynamicTestsWithDynamicContainers() {
+        return createInputList().stream()
+                .map(input ->
+                        dynamicContainer("Container for " + input, Stream.of(
+                                dynamicTest("not null", () -> assertNotNull(input)),
+                                dynamicContainer("properties test ", Stream.of(
+                                        dynamicTest("Length > 0 ", () -> assertTrue(input.length() > 0)),
+                                        dynamicTest("not Empty ", () -> assertFalse(input.isEmpty()))
+                                ))
+                        ))
+                );
+    }
 
     private List<String> createOutputList() {
         return Arrays.asList("ecar", "mom", "dad");
