@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("@DisplayName annotation demo")
-public class DisplayNameMethod {
+public class DisplayNameMethodTest {
 
     @Test
     @DisplayName("@DisplayName demo test")

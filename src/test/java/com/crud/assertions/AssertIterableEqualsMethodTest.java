@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
-class AssertIterableEqualsMethod {
+class AssertIterableEqualsMethodTest {
 
     /* Iterable Equality means:--
      *  1. Elements of Iterable are equal
@@ -26,7 +26,7 @@ class AssertIterableEqualsMethod {
     void assert_Iterable_Equals_with_Message() {
         String cricketer[] = {"Sachin", "Dravid", "Rahul", "Yuvraj", "Amit", "Bunty"};
         List<Object> expected = Arrays.asList(cricketer);
-        String cricketer1[] = {"Sachin", "Dravid", "Rahul", "Yuvraj", "Amit"};
+        String cricketer1[] = {"Sachin", "Dravid", "Rahul", "Yuvraj", "Amit", "Bunty"};
         List<Object> actual = Arrays.asList(cricketer1);
         assertIterableEquals(expected, actual, () -> "Both are Not same");
     }

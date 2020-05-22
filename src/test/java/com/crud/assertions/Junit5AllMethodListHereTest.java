@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class Junit5AllMethodListHere {
+public class Junit5AllMethodListHereTest {
 
     /*From JUnit5 you dont need visibility for test cases
      * i.e 1.class name do not start with public

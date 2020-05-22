@@ -26,23 +26,37 @@
 	<packaging>jar</packaging>
 
 	<dependencies>
-	
-			<dependency>
-			    <groupId>org.codehaus.mojo</groupId>
-			    <artifactId>sonar-maven-plugin</artifactId>
-			    <version>3.5.0.1254</version>
-			    <type>pom</type> 
-			</dependency>
-	
-			<dependency>
-				<groupId>org.junit.jupiter</groupId>
-				<artifactId>junit-jupiter-engine</artifactId>
-				<scope>test</scope>
-			</dependency>
 
-			<dependency>
-				<groupId>org.junit.platform</groupId>
-				<artifactId>junit-platform-runner</artifactId>
+		<dependency>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.5.0.1254</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-params</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.3.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-commons</artifactId>
+			<version>1.5.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-runner</artifactId>
 				<scope>test</scope>
 			</dependency>
 		<dependency>
@@ -60,18 +74,18 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		
+
 		<dependency>
-			<groupId>org.springframework.boot</groupId> 
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 <!-- 		<dependency> -->
 <!-- 			<groupId>mysql</groupId> -->
 <!-- 			<artifactId>mysql-connector-java</artifactId> -->
 <!-- 			<scope>runtime</scope> -->
-<!-- 		</dependency> --> 
+<!-- 		</dependency> -->
 
 
 <!--        URl: https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/
@@ -79,13 +93,13 @@
 			2. Add ojdbc8.jar file into it.
  -->
 		<dependency>
-		    <groupId>com.oracle</groupId> 
+		    <groupId>com.oracle</groupId>
 			<artifactId>ojdbc</artifactId>
 			<version>8</version>
-			<scope>system</scope> 
+			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/ojdbc8.jar</systemPath>
 	    </dependency>
-		
+
 		<!-- lombok setup in STS
 			1. Go to C:\Users\YourPCUserName\.m2\repository\org\projectlombok\lombok\1.18.10\
 			2. Open CMD and run the jar file using java -jar lombok-1.18.10.jar //this is can be any Version
@@ -93,10 +107,10 @@
 			4. Restart STS
 		-->
 		<dependency>
-			<groupId>org.projectlombok</groupId> 
+			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
