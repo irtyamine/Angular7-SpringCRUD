@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
@@ -73,6 +74,24 @@ public class DynamicTestMethodTest {
 
         return dynamicTests.iterator();
     }
+
+    @TestFactory
+    public Stream<DynamicTest> dynamicTestFromStream() {
+        List<String> inputList = createInputList();
+        List<String> outputList = createOutputList();
+
+        Collection<DynamicTest> dynamicTests = new ArrayList<>();
+        for (int i = 0; i < inputList.size(); i++) {
+            String input = inputList.get(i);
+            String output = outputList.get(i);
+
+            DynamicTest dynamicTest = dynamicTest("Dynamic Test for reverse() : input -" + input, () -> assertEquals("god", stringHelper.reverse("dog")));
+            dynamicTests.add(dynamicTest);
+        }
+
+        return dynamicTests.stream();
+    }
+
 
     private List<String> createOutputList() {
         return Arrays.asList("ecar", "mom", "dad");
