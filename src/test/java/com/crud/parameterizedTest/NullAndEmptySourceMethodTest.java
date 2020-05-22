@@ -25,4 +25,11 @@ public class NullAndEmptySourceMethodTest {
         StringHelper stringHelper = new StringHelper();
         assertEquals("", stringHelper.reverse(input));
     }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    public void testReverseWithNullAndEmptySource(String input) {
+        StringHelper stringHelper = new StringHelper();
+        assertEquals(input, stringHelper.reverse(input));
+    }
 }
