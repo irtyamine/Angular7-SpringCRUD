@@ -1,4 +1,4 @@
-package com.crud.operatingSystem;
+package com.crud.conditional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledOnOs;
